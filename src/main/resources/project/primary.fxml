@@ -50,9 +50,11 @@
                            <content>
                               <HBox prefHeight="240.0" prefWidth="540.0">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="210.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fitHeight="240.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="210.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="370.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="550.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
                                  </children>
                               </HBox>
                            </content>
