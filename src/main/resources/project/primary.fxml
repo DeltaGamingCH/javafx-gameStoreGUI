@@ -67,10 +67,10 @@
                                           </ImageView>
                                        </children>
                                     </Pane>
-                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="210.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="370.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="550.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Pane layoutX="10.0" layoutY="10.0" maxHeight="240.0" maxWidth="180.0" minHeight="240.0" minWidth="180.0" prefHeight="240.0" prefWidth="180.0" scaleShape="false" style="-fx-background-color: LIGHTBLUE;" />
+                                    <Pane layoutX="190.0" layoutY="10.0" maxHeight="240.0" maxWidth="180.0" minHeight="240.0" minWidth="180.0" prefHeight="240.0" prefWidth="180.0" scaleShape="false" style="-fx-background-color: AQUA;" />
+                                    <Pane layoutX="370.0" layoutY="10.0" maxHeight="240.0" maxWidth="180.0" minHeight="240.0" minWidth="180.0" prefHeight="240.0" prefWidth="180.0" scaleShape="false" style="-fx-background-color: LIME;" />
+                                    <Pane layoutX="370.0" layoutY="10.0" maxHeight="240.0" maxWidth="180.0" minHeight="240.0" minWidth="180.0" prefHeight="240.0" prefWidth="180.0" scaleShape="false" style="-fx-background-color: LIGHTGREEN;" />
                                  </children>
                               </HBox>
                            </content>
@@ -86,14 +86,19 @@
                            <content>
                               <HBox prefHeight="240.0" prefWidth="540.0">
                                  <children>
-                                    <ImageView fitHeight="240.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../../java/img/image1.png" />
-                                       </image></ImageView>
-                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="210.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="370.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                                    <ImageView fitHeight="240.0" fitWidth="180.0" layoutX="550.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Pane maxHeight="240.0" maxWidth="180.0" minHeight="240.0" minWidth="180.0" prefHeight="240.0" prefWidth="180.0" scaleShape="false" style="-fx-background-color: GRAY;">
+                                       <children>
+                                          <ImageView fx:id="imageView1" fitHeight="240.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../java/img/image1.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" maxHeight="240.0" maxWidth="180.0" minHeight="240.0" minWidth="180.0" prefHeight="240.0" prefWidth="180.0" scaleShape="false" style="-fx-background-color: LIGHTBLUE;" />
+                                    <Pane layoutX="190.0" layoutY="10.0" maxHeight="240.0" maxWidth="180.0" minHeight="240.0" minWidth="180.0" prefHeight="240.0" prefWidth="180.0" scaleShape="false" style="-fx-background-color: GOLD;" />
+                                    <Pane layoutX="370.0" layoutY="10.0" maxHeight="240.0" maxWidth="180.0" minHeight="240.0" minWidth="180.0" prefHeight="240.0" prefWidth="180.0" scaleShape="false" style="-fx-background-color: ORANGE;" />
+                                    <Pane layoutX="550.0" layoutY="10.0" maxHeight="240.0" maxWidth="180.0" minHeight="240.0" minWidth="180.0" prefHeight="240.0" prefWidth="180.0" scaleShape="false" style="-fx-background-color: PINK;" />
                                  </children>
                               </HBox>
                            </content>
