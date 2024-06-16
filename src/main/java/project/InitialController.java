@@ -21,4 +21,8 @@ public class InitialController {
             }
         });
     }
+
+    public ImageView getImageView() {
+        return imageView;
+    }
 }

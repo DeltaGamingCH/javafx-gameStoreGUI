@@ -6,17 +6,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<ScrollPane hbarPolicy="NEVER" maxWidth="1080.0" minHeight="1440.0" minWidth="540.0" prefWidth="540.0" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.InitialController">
+<ScrollPane hbarPolicy="NEVER" maxWidth="1080.0" minWidth="540.0" prefWidth="540.0" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.InitialController" >
    <content>
-       <BorderPane minHeight="1440.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+       <BorderPane prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
             <VBox prefWidth="380.0">
                <children>
-                  <HBox alignment="BOTTOM_RIGHT" prefHeight="360.0" prefWidth="380.0">
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="380.0" prefWidth="380.0">
                      <children>
-                        <Pane prefHeight="320.0" prefWidth="126.66" />
-                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="320.0" prefWidth="126.66" />
-                        <GridPane alignment="BOTTOM_RIGHT" maxHeight="160.0" maxWidth="-Infinity" prefHeight="160.0" prefWidth="126.66" style="-fx-background-color: PINK;" styleClass="header-featured-info" HBox.hgrow="NEVER">
+                        <Pane prefHeight="320.0" />
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="320.0" />
+                        <GridPane alignment="BOTTOM_RIGHT" maxHeight="160.0" maxWidth="-Infinity" prefHeight="160.0" style="-fx-background-color: PINK;" styleClass="header-featured-info" HBox.hgrow="NEVER">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -58,11 +58,11 @@
                            <content>
                               <HBox prefHeight="240.0" prefWidth="540.0">
                                  <children>
-                                    <Pane maxHeight="240.0" maxWidth="180.0" minHeight="240.0" minWidth="180.0" prefHeight="240.0" prefWidth="180.0" scaleShape="false" style="-fx-background-color: PINK;">
+                                    <Pane maxHeight="240.0" maxWidth="180.0" minHeight="240.0" minWidth="180.0" prefHeight="240.0" prefWidth="180.0" scaleShape="false" style="-fx-background-color: PINK;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
                                        <children>
                                           <ImageView fx:id="imageView" fitHeight="240.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../java/img/image1.png" />
+                                                <Image url="@../img/image1.png" />
                                              </image>
                                           </ImageView>
                                        </children>
@@ -90,7 +90,7 @@
                                        <children>
                                           <ImageView fx:id="imageView1" fitHeight="240.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../java/img/image1.png" />
+                                                <Image url="@../img/image1.png" />
                                              </image>
                                           </ImageView>
                                        </children>
@@ -117,10 +117,7 @@
                    <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints><!--
-               <children>
-                   <Button id="returnPrimary" mnemonicParsing="false" onAction="#returnPrimary" text="&lt;-" />
-               </children>-->
+               </rowConstraints>
             </GridPane>
          </left>
       </BorderPane>
