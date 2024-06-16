@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1440.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="540.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <BorderPane minHeight="1440.0" prefHeight="1440.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
-            <VBox minWidth="360.0" prefWidth="540.0" BorderPane.alignment="CENTER">
+            <VBox minWidth="380.0" BorderPane.alignment="CENTER">
                <children>
                   <GridPane minWidth="360.0" prefHeight="360.0" prefWidth="360.0" style="-fx-background-color: PINK;">
                      <columnConstraints>
@@ -22,9 +22,9 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                   </GridPane>
-                  <VBox prefHeight="720.0" prefWidth="100.0">
+                  <VBox prefWidth="100.0">
                      <children>
-                        <GridPane prefHeight="360.0">
+                        <GridPane>
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="-Infinity" />
@@ -51,7 +51,7 @@
                               <Button mnemonicParsing="false" style="-fx-background-color: GREEN;" text="Purchase" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+                        <VBox>
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="REQUIREMENTS">
                                  <font>
@@ -84,7 +84,7 @@
             </VBox>
          </center>
          <left>
-            <GridPane BorderPane.alignment="CENTER">
+            <GridPane minWidth="160.0" BorderPane.alignment="CENTER">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="160.0" prefWidth="100.0" />
                </columnConstraints>
