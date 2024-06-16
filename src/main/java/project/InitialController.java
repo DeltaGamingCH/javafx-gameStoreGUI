@@ -12,7 +12,6 @@ public class InitialController {
 
     @FXML
     public void initialize() {
-        // Add click event handler to switch scenes
         imageView.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             try {
                 App.setRoot("gameView");
