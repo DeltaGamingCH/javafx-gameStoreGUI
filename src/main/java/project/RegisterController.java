@@ -24,35 +24,23 @@ public class RegisterController {
     private Button registerButton;
 
     @FXML
-    private Button returnPrimary;
-
-    @FXML
-    private Hyperlink toLogin;
-
-    @FXML
-    private Hyperlink toRegister;
-
-    @FXML
     public void initialize() {
         registerButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             String email = emailField.getText();
             String password = passwordField.getText();
             try {
-                String content = email + password;
-                System.out.println(email + password);
-                JsonUtil.writeStringToFile(email, password);
+                String registerInfo = email + ", " + password;
+                System.out.println(registerInfo);
+
 
                 App.setRoot("login");
 
-                if (content != null && content.isEmpty()) {
+                if (registerInfo == null || registerInfo.isEmpty()) {
                     System.out.println("Is Empty");
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-            System.out.println("Email: " + email);
-            System.out.println("Password: " + password);
         });
     }
 

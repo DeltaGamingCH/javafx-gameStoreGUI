@@ -65,11 +65,11 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button fx:id="returnPrimary" mnemonicParsing="false" onAction="#returnPrimary" text="&lt;-" />
+                  <Button mnemonicParsing="false" onAction="#returnPrimary" text="&lt;-" />
                   <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                      <children>
-                        <Hyperlink fx:id="toRegister" text="Register" onAction="#toRegister"/>
-                        <Hyperlink fx:id="toLogin" text="Login" onAction="#toLogin" />
+                        <Hyperlink text="Register" onAction="#toRegister"/>
+                        <Hyperlink text="Login" onAction="#toLogin" />
                      </children>
                   </VBox>
                </children>

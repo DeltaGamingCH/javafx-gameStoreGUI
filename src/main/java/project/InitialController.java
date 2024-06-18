@@ -42,7 +42,6 @@ public class InitialController {
             }
         });
 
-
         viewGameButton.setOnAction(event -> {
             try {
                 App.setRoot("gameView");
@@ -67,8 +66,6 @@ public class InitialController {
             updateButtonVisibility();
         });
     }
-
-
 
     @FXML
     private Button login;
