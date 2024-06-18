@@ -28,7 +28,7 @@
                           </rowConstraints>
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="GAME TITLE" GridPane.columnSpan="2" />
-                              <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button fx:id="viewGameButton" mnemonicParsing="false" text="View Game" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <Text layoutX="10.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is a description about the game." wrappingWidth="180.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
@@ -60,7 +60,7 @@
                                  <children>
                                     <Pane maxHeight="240.0" maxWidth="160.0" minHeight="240.0" minWidth="160.0" prefHeight="240.0" prefWidth="160.0" scaleShape="false" style="-fx-background-color: PINK;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
                                        <children>
-                                          <ImageView fx:id="imageView" fitHeight="240.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fx:id="imageViewGame1" fitHeight="240.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@img/image1.png" />
                                              </image>
@@ -88,7 +88,7 @@
                                  <children>
                                     <Pane maxHeight="240.0" maxWidth="160.0" minHeight="240.0" minWidth="160.0" prefHeight="240.0" prefWidth="160.0" scaleShape="false" style="-fx-background-color: GRAY;">
                                        <children>
-                                          <ImageView fx:id="imageView1" fitHeight="240.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fx:id="imageViewGame2" fitHeight="240.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@img/image1.png" />
                                              </image>

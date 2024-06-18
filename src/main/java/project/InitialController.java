@@ -10,12 +10,35 @@ import java.io.IOException;
 public class InitialController {
 
     @FXML
-    private ImageView imageView;
+    private ImageView imageViewGame1;
+
+    @FXML
+    private ImageView imageViewGame2;
+
+    @FXML
+    private Button viewGameButton;
 
     @FXML
     public void initialize() {
         // Add click event handler to switch scenes
-        imageView.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+        imageViewGame1.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+            try {
+                App.setRoot("gameView");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        imageViewGame2.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+            try {
+                App.setRoot("gameView");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+
+        viewGameButton.setOnAction(event -> {
             try {
                 App.setRoot("gameView");
             } catch (IOException e) {
@@ -23,7 +46,6 @@ public class InitialController {
             }
         });
     }
-
     @FXML
     private Button login;
 
@@ -31,8 +53,4 @@ public class InitialController {
     private void login(ActionEvent event) throws IOException {
         App.setRoot("login");
     }
-
-    /*public ImageView getImageView() {
-        return imageView;
-    }*/
 }
