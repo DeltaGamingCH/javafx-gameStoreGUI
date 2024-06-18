@@ -10,6 +10,8 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
+import org.json.*;
+
 public class RegisterController {
 
     @FXML
@@ -36,9 +38,15 @@ public class RegisterController {
             String email = emailField.getText();
             String password = passwordField.getText();
             try {
-                String content = JsonUtil.readFileAsString("/project/users.json");
-                System.out.println("JSON content: " + content);
+                String content = email + password;
+                System.out.println(email + password);
+                JsonUtil.writeStringToFile(email, password);
+
                 App.setRoot("login");
+
+                if (content != null && content.isEmpty()) {
+                    System.out.println("Is Empty");
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
