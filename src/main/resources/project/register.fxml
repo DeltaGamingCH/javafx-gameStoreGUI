@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1440.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1440.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.RegisterController">
    <children>
       <BorderPane minHeight="1440.0" prefHeight="1440.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -30,7 +30,6 @@
                                     <TextField fx:id="emailField" layoutX="10.0" layoutY="26.0" promptText="example@gmail.com" />
                                     <Text layoutX="10.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD" />
                                     <PasswordField fx:id="passwordField" layoutX="10.0" layoutY="69.0" promptText="password" />
-                                    <Hyperlink text="Forgot Password" />
                                  </children>
                                  <opaqueInsets>
                                     <Insets />
@@ -39,7 +38,7 @@
                                     <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
                                  </GridPane.margin>
                               </VBox>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN" GridPane.columnSpan="2">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTER" GridPane.columnSpan="2">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
@@ -47,7 +46,7 @@
                                     <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Button fx:id="loginButton" mnemonicParsing="false" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button fx:id="registerButton" mnemonicParsing="false" text="Register" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                      </children>
@@ -69,7 +68,7 @@
                   <Button fx:id="returnPrimary" mnemonicParsing="false" onAction="#returnPrimary" text="&lt;-" />
                   <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                      <children>
-                        <Hyperlink fx:id="toRegister" text="Register" onAction="#toRegister" />
+                        <Hyperlink fx:id="toRegister" text="Register" onAction="#toRegister"/>
                         <Hyperlink fx:id="toLogin" text="Login" onAction="#toLogin" />
                      </children>
                   </VBox>

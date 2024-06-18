@@ -119,7 +119,8 @@
                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                   <Button text="Login" onAction="#login" />
+                   <Button fx:id="loginButton" text="Login" onAction="#login" />
+                   <Button fx:id="logoutButton" text="Logout" />
                </children>
             </GridPane>
          </left>

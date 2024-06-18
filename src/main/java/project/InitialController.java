@@ -19,8 +19,13 @@ public class InitialController {
     private Button viewGameButton;
 
     @FXML
+    private Button loginButton;
+
+    @FXML
+    private Button logoutButton;
+
+    @FXML
     public void initialize() {
-        // Add click event handler to switch scenes
         imageViewGame1.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             try {
                 App.setRoot("gameView");
@@ -45,12 +50,43 @@ public class InitialController {
                 e.printStackTrace();
             }
         });
+
+        updateButtonVisibility();
+
+        loginButton.setOnAction(event -> {
+            try {
+                App.setRoot("login");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        // Add click event handler to logout
+        logoutButton.setOnAction(event -> {
+            LoginController.loggedIn = false;
+            updateButtonVisibility();
+        });
     }
+
+
+
     @FXML
     private Button login;
 
     @FXML
     private void login(ActionEvent event) throws IOException {
         App.setRoot("login");
+    }
+
+    private void updateButtonVisibility() {
+        if (LoginController.loggedIn) {
+            loginButton.setVisible(false);
+            logoutButton.setVisible(true);
+            System.out.println("Updated login status: " + LoginController.loggedIn);
+        } else {
+            loginButton.setVisible(true);
+            logoutButton.setVisible(false);
+            System.out.println("Updated login status: " + LoginController.loggedIn);
+        }
     }
 }

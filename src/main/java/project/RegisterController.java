@@ -10,13 +10,7 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
-public class LoginController {
-
-    public static boolean loggedIn = false;
-
-    public static boolean loggedIn() {
-        return loggedIn;
-    }
+public class RegisterController {
 
     @FXML
     private TextField emailField;
@@ -25,7 +19,10 @@ public class LoginController {
     private PasswordField passwordField;
 
     @FXML
-    private Button loginButton;
+    private Button registerButton;
+
+    @FXML
+    private Button returnPrimary;
 
     @FXML
     private Hyperlink toLogin;
@@ -34,20 +31,14 @@ public class LoginController {
     private Hyperlink toRegister;
 
     @FXML
-    private Button returnPrimary;
-
-    @FXML
     public void initialize() {
-        // Add click event handler to login button
-        loginButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
-            // Handle login logic here
+        registerButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             String email = emailField.getText();
             String password = passwordField.getText();
             try {
                 String content = JsonUtil.readFileAsString("/project/users.json");
                 System.out.println("JSON content: " + content);
-                loggedIn = true;
-                App.setRoot("primary");
+                App.setRoot("login");
             } catch (IOException e) {
                 e.printStackTrace();
             }
