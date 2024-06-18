@@ -15,9 +15,6 @@ public class LoginController {
     private boolean isLoggedIn = false;
 
     @FXML
-    private TextField usernameField;
-
-    @FXML
     private TextField emailField;
 
     @FXML
