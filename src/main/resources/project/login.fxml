@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1440.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.GameViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1440.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.LoginController">
    <children>
       <BorderPane minHeight="1440.0" prefHeight="1440.0" prefWidth="540.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -34,10 +26,10 @@
                            <children>
                               <VBox GridPane.columnSpan="2" GridPane.rowIndex="1">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="USERNAME" />
-                                    <TextField promptText="username" />
                                     <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMAIL" />
-                                    <TextField layoutX="10.0" layoutY="26.0" promptText="example@gmail.com" />
+                                    <TextField fx:id="emailField" layoutX="10.0" layoutY="26.0" promptText="example@gmail.com" />
+                                    <Text layoutX="10.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD" />
+                                    <PasswordField fx:id="passwordField" layoutX="10.0" layoutY="69.0" promptText="password" />
                                     <Hyperlink text="Forgot Password" />
                                  </children>
                                  <opaqueInsets>
@@ -55,7 +47,7 @@
                                     <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
                                  </GridPane.margin>
                               </Text>
-                              <Button mnemonicParsing="false" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button fx:id="loginButton" mnemonicParsing="false" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                      </children>
