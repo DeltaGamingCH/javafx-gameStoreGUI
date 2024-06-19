@@ -3,7 +3,6 @@ package project;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -25,16 +24,8 @@ public class LoginController {
     @FXML
     private Button loginButton;
 
-    @FXML
     public void initialize() {
-        loginButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
-            String email = emailField.getText();
-            String password = passwordField.getText();
-            String registerData = email + password;
-
-            JSONArray users = JsonUtil.readUsers();
-            JsonUtil.addUser(email, password);
-        });
+        System.out.println();
     }
 
     @FXML

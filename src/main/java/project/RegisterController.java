@@ -32,7 +32,6 @@ public class RegisterController {
                 String registerInfo = email + ", " + password;
                 System.out.println(registerInfo);
 
-
                 App.setRoot("login");
 
                 if (registerInfo == null || registerInfo.isEmpty()) {
