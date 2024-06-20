@@ -10,8 +10,6 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
-import org.json.*;
-
 public class RegisterController {
 
     @FXML
@@ -29,14 +27,17 @@ public class RegisterController {
             String email = emailField.getText();
             String password = passwordField.getText();
             try {
-                String registerInfo = email + ", " + password;
-                System.out.println(registerInfo);
+                /*String registerInfo = email + ", " + password;
+                System.out.println(registerInfo);*/
+
+                String credentials = CredentialsUtil.getCredentials();
+                System.out.println(credentials);
 
                 App.setRoot("login");
 
-                if (registerInfo == null || registerInfo.isEmpty()) {
+                /*if (registerInfo == null || registerInfo.isEmpty()) {
                     System.out.println("Is Empty");
-                }
+                }*/
             } catch (IOException e) {
                 e.printStackTrace();
             }
