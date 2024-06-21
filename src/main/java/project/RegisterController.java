@@ -30,8 +30,6 @@ public class RegisterController {
                 /*String registerInfo = email + ", " + password;
                 System.out.println(registerInfo);*/
 
-                String credentials = CredentialsUtil.getCredentials();
-                System.out.println(credentials);
 
                 App.setRoot("login");
 

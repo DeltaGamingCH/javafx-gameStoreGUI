@@ -9,8 +9,6 @@ import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
-import org.json.*;
-
 public class LoginController {
 
     public static boolean loggedIn = false;
@@ -25,7 +23,36 @@ public class LoginController {
     private Button loginButton;
 
     public void initialize() {
-        System.out.println();
+        loginButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+            String email = emailField.getText().trim();
+            String password = passwordField.getText().trim();
+
+            try {
+                String credentials = CredentialsUtil.getCredentials();
+
+                String[] lines = credentials.split("\n");
+                for (String line : lines) {
+                    String[] parts = line.split(":");
+                    if (parts.length == 2) {
+                        String storedEmail = parts[0].trim();
+                        String storedPassword = parts[1].trim();
+
+                        System.out.println("Stored Values: " + storedEmail + storedPassword);
+                        if (storedEmail.equals(email) && storedPassword.equals(password)) {
+                            loggedIn = true;
+                            App.setRoot("primary");
+                            System.out.println("Email & Password are the same");
+                            break;
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            System.out.println(loggedIn);
+            System.out.println(email + password);
+        });
     }
 
     @FXML
