@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1440.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.LoginController">
    <children>
@@ -31,6 +32,7 @@
                                     <Text layoutX="10.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD" />
                                     <PasswordField fx:id="passwordField" layoutX="10.0" layoutY="69.0" promptText="password" />
                                     <Hyperlink text="Forgot Password" />
+                                    <Label fx:id="errorMessage" text="Email or password is incorrect." visible="false" textFill="red"/>
                                  </children>
                                  <opaqueInsets>
                                     <Insets />

@@ -26,11 +26,11 @@ public class CredentialsUtil {
         return credentials.toString();
     }
 
-    public static void PostCredentials(String email, String password) {
+    public static void postCredentials(String email, String password) {
         try (BufferedWriter post = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
-            post.write(email + ":" + password);
+            post.write("\n" + email + ":" + password);
             post.newLine();
-            System.out.println("Credentials added successfully: " + email + ":" + password);
+            System.out.println("New account created.");
         } catch (IOException e) {
             e.printStackTrace();
         }

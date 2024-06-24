@@ -24,18 +24,17 @@ public class RegisterController {
     @FXML
     public void initialize() {
         registerButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
-            String email = emailField.getText();
-            String password = passwordField.getText();
-            try {
-                /*String registerInfo = email + ", " + password;
-                System.out.println(registerInfo);*/
+            String email = emailField.getText().trim();
+            String password = passwordField.getText().trim();
 
+            if (email.isEmpty() || password.isEmpty()) {
+                System.out.println("Email or password is empty.");
+                return;
+            }
+            try {
+                CredentialsUtil.postCredentials(email, password);
 
                 App.setRoot("login");
-
-                /*if (registerInfo == null || registerInfo.isEmpty()) {
-                    System.out.println("Is Empty");
-                }*/
             } catch (IOException e) {
                 e.printStackTrace();
             }

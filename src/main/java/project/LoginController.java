@@ -6,9 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Label;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 public class LoginController {
 
@@ -23,6 +23,9 @@ public class LoginController {
     @FXML
     private Button loginButton;
 
+    @FXML
+    private Label errorMessage;
+
     public void initialize() {
         loginButton.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             String email = emailField.getText().trim();
@@ -30,20 +33,12 @@ public class LoginController {
 
             try {
                 String credentials = CredentialsUtil.getCredentials();
-                System.out.println("Try");
-
                 String[] lines = credentials.split("\n");
                 for (String line : lines) {
-                    System.out.println("Raw line: " + line);
                     String[] parts = line.split(":");
-                    System.out.println("ARRAY: \n" + Arrays.toString(parts) + "\n");
-                    System.out.println("Parts length: " + parts.length);
-                    if (parts.length == 2) {  // Correct length for email:password
+                    if (parts.length == 2) {
                         String storedEmail = parts[0].trim();
                         String storedPassword = parts[1].trim();
-
-                        System.out.println("Stored Values: " + storedEmail + " " + storedPassword);
-                        System.out.println("Entered Values: " + email + " " + password);
                         if (storedEmail.equals(email) && storedPassword.equals(password)) {
                             loggedIn = true;
                             App.setRoot("primary");
@@ -51,15 +46,13 @@ public class LoginController {
                             break;
                         } else {
                             System.out.println("Email or password is incorrect.");
+                            errorMessage.setVisible(true);
                         }
                     }
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-            System.out.println(loggedIn);
-            System.out.println(email + password);
         });
     }
 
