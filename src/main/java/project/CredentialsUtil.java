@@ -17,7 +17,7 @@ public class CredentialsUtil {
                 if (parts.length == 2) {
                     String email = parts[0];
                     String password = parts[1];
-                    credentials.append("Email: ").append(email).append(", Password: ").append(password).append("\n");
+                    credentials.append(email).append(":").append(password).append("\n");
                 }
             }
         } catch (IOException e) {

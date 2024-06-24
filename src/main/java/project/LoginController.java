@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 public class LoginController {
 
@@ -29,20 +30,27 @@ public class LoginController {
 
             try {
                 String credentials = CredentialsUtil.getCredentials();
+                System.out.println("Try");
 
                 String[] lines = credentials.split("\n");
                 for (String line : lines) {
+                    System.out.println("Raw line: " + line);
                     String[] parts = line.split(":");
-                    if (parts.length == 2) {
+                    System.out.println("ARRAY: \n" + Arrays.toString(parts) + "\n");
+                    System.out.println("Parts length: " + parts.length);
+                    if (parts.length == 2) {  // Correct length for email:password
                         String storedEmail = parts[0].trim();
                         String storedPassword = parts[1].trim();
 
-                        System.out.println("Stored Values: " + storedEmail + storedPassword);
+                        System.out.println("Stored Values: " + storedEmail + " " + storedPassword);
+                        System.out.println("Entered Values: " + email + " " + password);
                         if (storedEmail.equals(email) && storedPassword.equals(password)) {
                             loggedIn = true;
                             App.setRoot("primary");
                             System.out.println("Email & Password are the same");
                             break;
+                        } else {
+                            System.out.println("Email or password is incorrect.");
                         }
                     }
                 }
